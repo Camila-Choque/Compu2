@@ -1,0 +1,25 @@
+-Objetivos de la Clase: El objetivo de esta clase fue aprender a configurar y utilizar Git, una herramienta esencial en el mundo del desarrollo de software. Git permite el control de versiones, lo que facilita la gestión del código y la colaboración entre desarrolladores. 
+Desarrollo de la Clase:
+    1-Configuración de Git:
+        -Instalación y configuración básica de Git en el sistema.
+        -Se explicó la importancia de configurar el nombre y el correo electrónico para asociar los commits con 
+        una identidad   específica.
+        -Se discutió cómo Git ayuda a los desarrolladores a trabajar de forma organizada, guardando y gestionando 
+        versiones de su trabajo.  
+        
+    2-Creación del Repositorio Git:
+        -Se mostró cómo crear un repositorio local para un proyecto. Esto permite comenzar a trabajar en un proyecto 
+        de software, asegurando que todas las versiones de los archivos estén registradas y se pueda hacer seguimiento 
+        de los cambios.
+
+    3-Flujo de trabajo básico de Git:
+        -Se aprendio los tres estados principales de los archivos en Git: el área de trabajo,
+        el área de staging, y el repositorio. Cada cambio pasa de un estado a otro antes de ser finalmente 
+        comprometido (commit).
+        -Se discutió la importancia de los commits, cómo realizar uno, y cómo escribir mensajes descriptivos para 
+        que otros desarrolladores entiendan los cambios realizados.
+
+   
+   4- Resolución de Conflictos:
+       -Se explicó cómo se pueden presentar conflictos cuando dos personas modifican el mismo archivo y cómo 
+       resolverlos de forma efectiva, mediante el uso de comandos como git pull, git merge y git rebase.
