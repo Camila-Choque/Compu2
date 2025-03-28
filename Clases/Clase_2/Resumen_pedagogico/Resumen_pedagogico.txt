@@ -1,0 +1,15 @@
+
+   1- Estructura de la conversación:
+    La conversación avanzó de conceptos básicos sobre procesos a temas más específicos como procesos zombis y huérfanos. Se introdujeron herramientas y funciones prácticas en Python y Linux de manera secuencial, facilitando una comprensión progresiva.
+
+    2-Claridad y profundidad:
+    Hubo momentos donde se profundizó, especialmente al explicar los procesos zombis y cómo evitarlos con wait(). También se requirió aclaración sobre el uso de getpid() y getppid() en ejemplos prácticos.
+
+    3-Patrones de aprendizaje:
+    El usuario tuvo dudas recurrentes sobre el concepto de procesos zombis y la diferencia entre los métodos pid y getpid(), lo que mostró un área de dificultad en entender la manipulación precisa de procesos.
+
+    4-Aplicación y reflexión:
+    El usuario intentó aplicar lo aprendido a través de ejemplos prácticos y mostró interés por verificar cómo sus procesos se comportaban en el sistema operativo, relacionando los conceptos con comandos como ps.
+
+   5-Observaciones adicionales:
+    El usuario tiene una buena base para entender procesos, pero podría beneficiarse de ejemplos más interactivos y visuales para consolidar conceptos como los procesos zombis. Reforzar la práctica con más ejercicios podría ayudar a aclarar dudas persistentes.
