@@ -1,0 +1,55 @@
+1. Estructura de la conversación
+
+La conversación se desarrolló siguiendo un esquema progresivo y bien estructurado, que respetó tu plan inicial:
+
+   -Comenzamos con una explicación conceptual de las señales, pasando luego por su implementación básica en Python.
+   -A medida que avanzamos, el enfoque pasó de la teoría a la práctica: se trabajaron handlers, sincronización de
+     procesos, uso de señales en multihilo y finalmente la comparación con otros mecanismos de IPC.
+   -Se respetaron las pausas para puesta en común, lo cual consolidó aprendizajes y permitió repasar conceptos antes de seguir.
+   -El cierre se organizó en torno a una entrega obligatoria final, lo que permitió integrar todos los contenidos.
+
+Cambios en el enfoque: al principio, el objetivo fue la comprensión básica, pero luego se incorporaron preguntas más reflexivas y técnicas (por ejemplo, diferencias entre señales y otras formas de IPC).
+
+2. Claridad y profundidad
+
+Se alcanzó una profundización progresiva en los conceptos clave:
+
+    -Se abordaron en profundidad temas como el manejo de SIGINT, la función signal.signal(), y las limitaciones de las señales.
+    -Se utilizaron ejemplos comentados para reforzar lo aprendido.
+    -Se hicieron preguntas de comprensión tras cada tema importante, que permitieron evaluar si el concepto fue 
+    asimilado antes de continuar.
+
+Ideas consolidadas:
+
+    -El papel de las señales como notificaciones simples entre procesos.
+    -El uso correcto de signal.signal, os.kill y signal.SIG_IGN/SIG_DFL.
+    -La diferencia entre señales y otros mecanismos como pipes, colas y memoria compartida.
+
+3. Patrones de aprendizaje
+
+Se observó un patrón de aprendizaje guiado y autoevaluación activa:
+
+    -Cuando surgieron dudas (como con el kill -SIGINT <pid>), se corrigió de forma contextualizada, favoreciendo el 
+    aprendizaje por error.
+    -Hubo conceptos que requirieron más precisión, como el uso correcto del handler o los efectos de SIGKILL.
+
+Temas que requirieron más aclaración:
+
+    -La diferencia entre SIGINT y SIGKILL.
+    -El comportamiento de señales en programas multihilo.
+    -La noción de async-signal-safe.
+
+4. Aplicación y reflexión
+
+    -Se logró una buena integración con experiencias previas en programación de sistemas.
+    -Se intentó aplicar los conceptos a casos concretos, como el manejo de múltiples señales o la sincronización 
+     entre procesos.
+    -Tus respuestas en las puestas en común mostraron reflexión y vinculación con lo aprendido.
+
+5. Observaciones adicionales
+
+    -Mostrás un perfil de aprendizaje estructurado, reflexivo y colaborativo: buscás consolidar antes de avanzar,
+     y respetás instancias de recapitulación.
+    -Te benefició la estrategia de pausas guiadas, preguntas de comprensión, y progresión paso a paso.
+
+   
