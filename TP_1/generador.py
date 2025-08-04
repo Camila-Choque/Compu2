@@ -18,7 +18,7 @@ def generador(pipe_a, pipe_b, pipe_c):
 
         time.sleep(1)  # esperar 1 segundo
 
-    # Luego de enviar los 60 datos, cerrar los pipes para indicar fin
+    # Luego de enviar los 60 datos
     pipe_a.close()
     pipe_b.close()
     pipe_c.close()

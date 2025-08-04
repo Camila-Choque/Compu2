@@ -17,7 +17,7 @@ def verificar_blockchain():
     suma_oxigeno = 0
 
     for i, bloque in enumerate(bloques):
-        # Verificar encadenamiento
+       
         if i == 0:
             esperado_prev_hash = "0"
         else:

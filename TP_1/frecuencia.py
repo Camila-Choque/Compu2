@@ -1,5 +1,5 @@
 import numpy as np
-#sudo apt install python3-pip
+
 def analizador_frecuencia(pipe, queue):
     ventana = []
 
@@ -7,12 +7,12 @@ def analizador_frecuencia(pipe, queue):
         try:
             data = pipe.recv()
         except EOFError:
-            break  # Pipe cerrado, fin de datos
+            break  
 
         frecuencia = data["frecuencia"]
         ventana.append(frecuencia)
         if len(ventana) > 30:
-            ventana.pop(0)  # mantener ventana móvil
+            ventana.pop(0)  
 
         media = np.mean(ventana)
         desv = np.std(ventana)

@@ -10,7 +10,7 @@ def calcular_hash(prev_hash, datos, timestamp):
 def verificador(queue):
     bloques = []
     pendientes = {}
-    prev_hash = "0"  # bloque génesis
+    prev_hash = "0"  
 
     while True:
         resultado = queue.get()

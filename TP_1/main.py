@@ -6,12 +6,12 @@ from oxigeno import analizador_oxigeno
 from verificador import verificador
 
 if __name__ == "__main__":
-    # Pipes: generador → analizadores
+    
     a_pipe_parent, a_pipe_child = multiprocessing.Pipe()
     b_pipe_parent, b_pipe_child = multiprocessing.Pipe()
     c_pipe_parent, c_pipe_child = multiprocessing.Pipe()
 
-    # Cola: analizadores → verificador
+   
     cola_resultados = multiprocessing.Queue()
 
     # Procesos analizadores
@@ -32,5 +32,21 @@ if __name__ == "__main__":
     proc_verif.start()
     proc_gen.start()
 
-    # Esperar a que el generador termine
-    proc_gen.join()
+    try:
+        proc_gen.join()
+    except KeyboardInterrupt:
+        print("\n[!] Interrupción detectada. Finalizando procesos...")
+
+       
+        a_pipe_parent.close()
+        b_pipe_parent.close()
+        c_pipe_parent.close()
+
+       
+        proc_a.join()
+        proc_b.join()
+        proc_c.join()
+
+        
+        cola_resultados.put("FIN")
+        proc_verif.join()
