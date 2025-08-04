@@ -25,28 +25,24 @@ if __name__ == "__main__":
     # Proceso generador
     proc_gen = multiprocessing.Process(target=generador, args=(a_pipe_parent, b_pipe_parent, c_pipe_parent))
 
-    # Iniciar procesos
-    proc_a.start()
-    proc_b.start()
-    proc_c.start()
-    proc_verif.start()
-    proc_gen.start()
-
     try:
+        # Iniciar procesos
+        proc_a.start()
+        proc_b.start()
+        proc_c.start()
+        proc_verif.start()
+        proc_gen.start()
+
+
         proc_gen.join()
+
+        print("\n=== Fin del programa. Todos los bloques procesados correctamente ===")
+
     except KeyboardInterrupt:
-        print("\n[!] Interrupción detectada. Finalizando procesos...")
+        print("\n=== Ejecución interrumpida por el usuario. Cerrando procesos... ===")
 
-       
-        a_pipe_parent.close()
-        b_pipe_parent.close()
-        c_pipe_parent.close()
-
-       
-        proc_a.join()
-        proc_b.join()
-        proc_c.join()
-
-        
-        cola_resultados.put("FIN")
-        proc_verif.join()
+    finally:
+        for p in [proc_a, proc_b, proc_c, proc_verif, proc_gen]:
+            if p.is_alive():
+                p.terminate()
+            p.join()

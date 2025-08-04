@@ -11,7 +11,7 @@ def generador(pipe_a, pipe_b, pipe_c):
             "presion": [random.randint(110, 180), random.randint(70, 110)],
             "oxigeno": random.randint(90, 100)
         }
-        # Enviar a cada proceso analizador
+        
         pipe_a.send(data)
         pipe_b.send(data)
         pipe_c.send(data)
