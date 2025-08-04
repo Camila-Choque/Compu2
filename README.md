@@ -22,6 +22,8 @@
   -     cd TP_1
   3 . Instalar las dependencias (si no las tenés):
   -     pip install numpy
+    otra opcion es:
+  -     sudo apt install python3-numpy
   4 . Ejecutar el sistema concurrente para generar la cadena de bloques (se genera el archivo "blockchain.json"):
   -     python3 main.py
   5 . Ejecutar el script externo para verificar la cadena y generar reporte (se genera el archivo "reporte.txt"):
