@@ -17,7 +17,7 @@
   - reporte.txt — Reporte generado por verificar_cadena.py.
 ## Pasos para ejecutar
 - 1 . Clonar el repositorio
-  -      git clone
+  -      git clone git@github.com:Camila-Choque/Compu2.git
   2 . Navegar hasta el directorio correspondiente
   -     cd TP_1
   3 . Instalar las dependencias (si no las tenés):
