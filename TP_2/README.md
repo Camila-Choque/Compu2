@@ -37,34 +37,34 @@
 
 # Ejecucion Principal
 
-1- Clonar repositorio
-  - git@github.com:Camila-Choque/Compu2.git
-2- Navegar al directorio
-  - cd TP_2
-3-Crear el entorno virtual
-  - python3 -m venv .venv
-4- Activarlo
-  - source .venv/bin/activate 
-5- Instalar dependencias
-  - pip install -r requirements.txt 
-6- (Opcional) Instalar Google Chrome en Ubuntu/Debian
-  - wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-    sudo dpkg -i google-chrome-stable_current_amd64.deb
-    sudo apt-get install -f
+### 1 - Clonar repositorio
+       git@github.com:Camila-Choque/Compu2.git
+### 2 - Navegar al directorio
+     cd TP_2
+### 3- Crear el entorno virtual
+     python3 -m venv .venv
+### 4 - Activarlo
+     source .venv/bin/activate 
+### 5 - Instalar dependencias
+     pip install -r requirements.txt 
+### 6 - (Opcional) Instalar Google Chrome en Ubuntu/Debian
+     wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+     sudo dpkg -i google-chrome-stable_current_amd64.deb
+     sudo apt-get install -f
 
 # Ejecucion de Servidores
 
-1- En una terminal adentro del entorno virtual activar el servidor de scraping (Parte A):
-   - python server_scraping.py -i 0.0.0.0 -p 8000
-2- En una segunda terminal adentro del entorno virtual activar servidor de procesamiento (Parte B):
-   - python server_processing.py -i 0.0.0.0 -p 9001 -n 4
-3- En una tercera terminal adentro del entorno virtual ejecutar el siguiente comando:
-  - python3 client.py
+### 1 - En una terminal adentro del entorno virtual activar el servidor de scraping (Parte A):
+     python server_scraping.py -i 0.0.0.0 -p 8000
+### 2 - En una segunda terminal adentro del entorno virtual activar servidor de procesamiento (Parte B):
+     python server_processing.py -i 0.0.0.0 -p 9001 -n 4
+### 3 - En una tercera terminal adentro del entorno virtual ejecutar el siguiente comando:
+    python3 client.py
 
 - Nota: Como resultado final, el scraper devuelve un JSON con toda la información extraída de la página web. Además, se abre automáticamente una pestaña (o se puede visualizar en los archivos) mostrando una captura de la página.
 
 # Ejecucion de Test
-1- Para ejecutar test_processor.py se debe estar dentro del entorno virtual:
-  - python3 Test/test_processor.py
-2- Para ejecutar test_scraper.py se debe estar dentro del entorno virtual:
-  - python3 Test/test_scraper.py
+### 1- Para ejecutar test_processor.py se debe estar dentro del entorno virtual:
+    python3 Test/test_processor.py
+### 2- Para ejecutar test_scraper.py se debe estar dentro del entorno virtual:
+    python3 Test/test_scraper.py
