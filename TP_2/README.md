@@ -40,7 +40,7 @@
 ### 1 - Clonar repositorio
        git clone git@github.com:Camila-Choque/Compu2.git
 ### 2 - Navegar al directorio
-     cd TP_2
+     cd Compu2/TP_2
 ### 3- Crear el entorno virtual
      python3 -m venv .venv
 ### 4 - Activarlo
