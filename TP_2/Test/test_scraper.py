@@ -25,14 +25,14 @@ class TestServerScraping(unittest.IsolatedAsyncioTestCase):
     async def asyncTearDown(self):
         await self.client.close()
 
-    # ---------- TEST 1: health_check ----------
+  
     async def test_health_check(self):
         resp = await self.client.get('/health')
         self.assertEqual(resp.status, 200)
         data = await resp.json()
         self.assertEqual(data["status"], "ok")
 
-    # ---------- TEST 2: handle_scrape_request sin URL ----------
+
     async def test_scrape_missing_url(self):
         resp = await self.client.get('/scrape')
         self.assertEqual(resp.status, 400)
@@ -40,7 +40,7 @@ class TestServerScraping(unittest.IsolatedAsyncioTestCase):
         self.assertIn('error', data)
         self.assertEqual(data['error'], 'URL parameter is required')
 
-    # ---------- TEST 3: handle_scrape_request con URL válida ----------
+  
     @patch("server_scraping.perform_scraping", new_callable=AsyncMock)
     async def test_scrape_with_valid_url(self, mock_scrape):
         mock_scrape.return_value = {
@@ -55,7 +55,7 @@ class TestServerScraping(unittest.IsolatedAsyncioTestCase):
         self.assertEqual(data["status"], "success")
         mock_scrape.assert_awaited_once()
 
-    # ---------- TEST 4: perform_scraping (éxito) ----------
+   
     @patch("server_scraping.fetch_html", new_callable=AsyncMock)
     @patch("server_scraping.send_to_processing_server", new_callable=AsyncMock)
     @patch("server_scraping.extract_title", return_value="Título de prueba")
@@ -74,14 +74,13 @@ class TestServerScraping(unittest.IsolatedAsyncioTestCase):
         self.assertIn("processing_data", result)
         mock_processing.assert_awaited_once()
 
-    # ---------- TEST 5: perform_scraping (error) ----------
     @patch("server_scraping.fetch_html", new_callable=AsyncMock, side_effect=Exception("Falla de red"))
     async def test_perform_scraping_error(self, mock_fetch):
         result = await perform_scraping("http://example.com")
         self.assertEqual(result["status"], "error")
         self.assertIn("error", result)
 
-    # ---------- TEST 6: send_to_processing_server (error) ----------
+  
     @patch("server_scraping.asyncio.open_connection", side_effect=Exception("conexión rechazada"))
     async def test_send_to_processing_server_error(self, mock_conn):
         result = await send_to_processing_server({"url": "http://example.com"})
