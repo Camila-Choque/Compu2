@@ -56,7 +56,9 @@
 
 ### 1 - En una terminal adentro del entorno virtual activar el servidor de scraping (Parte A):
      python server_scraping.py -i 0.0.0.0 -p 8000
-### 2 - En una segunda terminal adentro del entorno virtual activar servidor de procesamiento (Parte B):
+### 2 - En una segunda terminal adentro del entorno virtual instalamos lo siguiente:
+     pip install webdriver-manager
+### Luego activamos el servidor de procesamiento (Parte B):
      python server_processing.py -i 0.0.0.0 -p 9001 -n 4
 ### 3 - En una tercera terminal adentro del entorno virtual ejecutar el siguiente comando:
     python3 client.py
