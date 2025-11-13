@@ -38,7 +38,7 @@
 # Ejecucion Principal
 
 ### 1 - Clonar repositorio
-       git@github.com:Camila-Choque/Compu2.git
+       git clone git@github.com:Camila-Choque/Compu2.git
 ### 2 - Navegar al directorio
      cd TP_2
 ### 3- Crear el entorno virtual
